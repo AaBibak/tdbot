@@ -23,7 +23,7 @@
 #define PROG_NAME "telegram-bot"
 #endif
 
-#define TELEGRAM_CLI_VERSION "VERSION"
+#define TELEGRAM_CLI_VERSION "NUMBER"
 #define TELEGRAM_CLI_API_HASH "APIHASH"
 #define TELEGRAM_CLI_API_ID APIID
  
