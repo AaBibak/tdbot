@@ -253,7 +253,7 @@ void CliClient::login_continue (const td::td_api::authorizationStateClosed &resu
 
 void CliClient::login_continue (const td::td_api::authorizationStateWaitTdlibParameters &result) {
 //tdlibParameters use_test_dc:Bool database_directory:string files_directory:string use_file_database:Bool use_chat_info_database:Bool use_message_database:Bool use_secret_chats:Bool api_id:int32 api_hash:string system_language_code:string device_model:string system_version:string application_version:string enable_storage_optimizer:Bool ignore_file_names:Bool = TdlibParameters;
-  send_request (td::make_tl_object<td::td_api::setTdlibParameters>(td::make_tl_object<td::td_api::tdlibParameters>(param_.use_test_dc, param_.database_directory, param_.files_directory, true, true, true, true, param_.api_id, param_.api_hash, "en", "Unix/Console/Bot", "UNIX/??", TELEGRAM_CLI_VERSION, false, param_.ignore_file_names)), std::make_unique<TdAuthorizationStateCallback>());
+  send_request (td::make_tl_object<td::td_api::setTdlibParameters>(td::make_tl_object<td::td_api::tdlibParameters>(param_.use_test_dc, param_.database_directory, param_.files_directory, true, true, true, true, param_.api_id, param_.api_hash, "en", "NAME/Console/BG", "NAME/X", TELEGRAM_CLI_VERSION, false, param_.ignore_file_names)), std::make_unique<TdAuthorizationStateCallback>());
 }
 
 void CliClient::login_continue (const td::td_api::authorizationStateWaitEncryptionKey &result) {
@@ -274,7 +274,6 @@ void CliClient::on_update (td::tl_object_ptr<td::td_api::Update> update) {
   std::string v = td::json_encode<std::string>(td::ToJson (update));
 
   fds_.for_each ([&](td::uint64 id, auto &x) {  
-    x.get()->write (v);
     x.get()->work (id);
     });
 
