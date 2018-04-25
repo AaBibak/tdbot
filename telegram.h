@@ -23,9 +23,9 @@
 #define PROG_NAME "telegram-bot"
 #endif
 
-#define TELEGRAM_CLI_VERSION "1.6.3"
-#define TELEGRAM_CLI_API_HASH "36722c72256a24c1225de00eb6a1ca74"
-#define TELEGRAM_CLI_API_ID 2899
+#define TELEGRAM_CLI_VERSION "VERSION"
+#define TELEGRAM_CLI_API_HASH "APIHASH"
+#define TELEGRAM_CLI_API_ID APIID
  
 #define TELEGRAM_CLI_VERSION_STR \
 "Telegram-bot version " TELEGRAM_CLI_VERSION " (uses tdlib)"
